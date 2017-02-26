@@ -31,10 +31,10 @@ SoftTimerSet<2> gSoftTimerSet;
 Trigger *gTrigger = 0;
 
 ISR(TIMER0_OVF_vect) {
-	if(++overflow_counter == SECOND_PRESCALER) {
+  if(++overflow_counter == SECOND_PRESCALER) {
     gSoftTimerSet.tick();
-		overflow_counter = 0;
-	}
+    overflow_counter = 0;
+  }
 }
 
 ISR(INT0_vect) {
@@ -44,13 +44,13 @@ ISR(INT0_vect) {
 int main(void) {
   INIT_OUTPUT();
   INIT_TRIGGER();
-	INIT_TIMER0();
+  INIT_TIMER0();
   TimedOutput output((volatile void *)&PORTB, OUTPUT_PORT_MASK, OUTPUT_ON_TIME);
   gSoftTimerSet.add(&output);
   Trigger trigger(&output, TRIGGER_HOLD_OFF_TIME);
   gSoftTimerSet.add(&trigger);
   gTrigger = &trigger;
-	sei();
+  sei();
   while(1);
 }
 
