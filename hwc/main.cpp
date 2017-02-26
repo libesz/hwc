@@ -32,12 +32,9 @@ SoftTimerSet gSoftTimerSet;
 Trigger *gTrigger = 0;
 
 ISR(TIMER0_OVF_vect) {
-	++overflow_counter;
-	switch(overflow_counter) {
-		case SECOND_PRESCALER:
+	if(++overflow_counter == SECOND_PRESCALER) {
     gSoftTimerSet.tick();
 		overflow_counter = 0;
-		break;
 	}
 }
 
