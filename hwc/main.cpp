@@ -9,8 +9,6 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-#define TIMERSETSIZE 2
-
 #include "SoftTimerSet.h"
 #include "TimedOutput.h"
 
@@ -29,7 +27,7 @@
 #define SECOND_PRESCALER 4
 volatile unsigned int overflow_counter = 0;
 
-SoftTimerSet gSoftTimerSet;
+SoftTimerSet<2> gSoftTimerSet;
 Trigger *gTrigger = 0;
 
 ISR(TIMER0_OVF_vect) {
