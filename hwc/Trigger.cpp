@@ -8,7 +8,7 @@
 
 #include "Trigger.h"
 
-Trigger::Trigger(BlinkingLed *newOutput,
+Trigger::Trigger(TimedOutput *newOutput,
                  unsigned short newHoldOffTime): SoftTimerHandler(false, false, false),
                                                  output(newOutput),
                                                  holdOffTime(newHoldOffTime) {  

@@ -12,7 +12,7 @@
 #define TIMERSETSIZE 2
 
 #include "SoftTimerSet.h"
-#include "BlinkingLed.h"
+#include "TimedOutput.h"
 
 #include "Trigger.h"
 
@@ -44,7 +44,7 @@ int main(void) {
   INIT_OUTPUT();
   INIT_TRIGGER();
 	INIT_TIMER0();
-  BlinkingLed output((volatile void *)&PORTB, 1<<3, OUTPUT_ON_TIME);
+  TimedOutput output((volatile void *)&PORTB, 1<<3, OUTPUT_ON_TIME);
   gSoftTimerSet.add(&output);
   Trigger trigger(&output, TRIGGER_HOLD_OFF_TIME);
   gSoftTimerSet.add(&trigger);

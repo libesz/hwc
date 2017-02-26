@@ -10,15 +10,15 @@
 #define __TRIGGER_H__
 
 #include "SoftTimer.h"
-#include "BlinkingLed.h"
+#include "TimedOutput.h"
 
 class Trigger: public SoftTimerHandler {
 	Trigger( const Trigger &c );
 	Trigger& operator=( const Trigger &c );
-  BlinkingLed *output;
+  TimedOutput *output;
   unsigned short holdOffTime;
 public:
-  Trigger(BlinkingLed *newOutput, unsigned short newHoldOffTime);
+  Trigger(TimedOutput *newOutput, unsigned short newHoldOffTime);
   ~Trigger();
   void activate();
 };
