@@ -19,7 +19,7 @@
 #define TRIGGER_HOLD_OFF_TIME 1200
 //Config END
 
-#define OUTPUT_PORT_MASK 1<<3
+#define OUTPUT_PORT_MASK 1<<4
 #define INIT_OUTPUT()  DDRB|=OUTPUT_PORT_MASK;                                 // PORTB3 -> output
 #define INIT_TRIGGER() PORTB|=1<<2;MCUCR|=1<<ISC01;GIMSK|=1<<INT0; // PORTB2 -> input (by default), activate pull-up and falling edge interrupt
 

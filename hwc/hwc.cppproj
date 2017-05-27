@@ -102,6 +102,7 @@
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\atmel\ATtiny_DFP\1.1.102\include</Value>
+      <Value>../../../AvrCppBaseLib/AvrCppBaseLib</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
