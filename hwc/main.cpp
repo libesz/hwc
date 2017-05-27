@@ -15,8 +15,8 @@
 #include "Trigger.h"
 
 //Config BEGIN
-#define OUTPUT_ON_TIME 120
-#define TRIGGER_HOLD_OFF_TIME 1200
+#define OUTPUT_ON_TIME 300
+#define TRIGGER_HOLD_OFF_TIME 1500
 //Config END
 
 #define OUTPUT_PORT_MASK 1<<4
