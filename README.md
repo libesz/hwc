@@ -22,3 +22,6 @@ The code is written in C++ and using my base library [from here](https://github.
 * ATTINY45@1MHz
 * Opto couplers for both input from the alarm system and towards the output
 * 12V relay to control the pump
+
+## Project documentation:
+[Link](http://libesz.digitaltrip.hu/automatic-how-water-circulator/)
